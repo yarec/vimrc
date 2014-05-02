@@ -45,8 +45,8 @@ endif
 "exec    "normal :language en_US.UTF8"
 
 " Load amix-vimrc
-execute  "source ~/.vim/amix-vimrc/basic.vim"
-execute  "source ~/.vim/amix-vimrc/extended.vim"
+execute  "source ~/.vim/amix-vimrc/vimrcs/basic.vim"
+execute  "source ~/.vim/amix-vimrc/vimrcs/extended.vim"
 
 set rtp+=$VIMRT
 
