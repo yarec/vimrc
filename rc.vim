@@ -125,9 +125,12 @@ nmap <leader>fu :se ff=unix<cr>
 " => Files and backups, Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Turn backup on
-set undodir=~/.vim/tmp//     " undo files
-set backupdir=~/.vim/tmp// " backups
-set directory=~/.vim/tmp//   " swap files
+try
+    set undodir=~/.vim/tmp/     " undo files
+catch
+endtry
+set backupdir=~/.vim/tmp/ " backups
+set directory=~/.vim/tmp/   " swap files
 set backup
 set wb
 set swapfile
@@ -390,9 +393,9 @@ endif
 
 "Fast quiting
 nmap <leader>qa :qa!<cr>
-nmap <leader>q :q!<cr>
+nmap <leader>q  :q!<cr>
 nmap <leader>xa :wqa!<cr>
-nmap <leader>x :wq!<cr>
+nmap <leader>x  :wq!<cr>
 
 "Fast Edit #
 nmap <leader>ep :e#<cr>
@@ -400,20 +403,17 @@ nmap <leader>e. ,cd:e.<cr>
 nmap <leader>ed ,cd:e 
 
 "Fast reloading of the .vimrc
-map <leader>s :source $BASE_PATH/vim/vimrc<cr>
+map <leader>s :source $BASE_PATH/vimrc.vim<cr>
 
 "Fast editing of rv.pl conf
-map <leader>tt :tabedit $BASE_PATH/pl/wt.pl<cr>,tm0<cr>
-map <leader>tf :tabedit ~/.wt/conf<cr>,tm0<cr>
-map <leader>tbf :tabedit $BASE_PATH/pl/conf<cr>,tm0<cr>
+map <leader>tt :tabedit $SVM_PATH/scheme/vim.scm<cr>,tm0<cr>
+map <leader>tf :tabedit ~/.svm/conf/svm-conf.scm<cr>,tm0<cr>
 
 "Fast editing of .vimrc
-map <leader>r :e! $BASE_PATH/vim/vimrc<cr>
-map <leader>tr :tabedit ~/.wt/vimrc<cr>,tm0<cr>
-map <leader>tbr :tabedit $BASE_PATH/vim/vimrc<cr>,tm0<cr>
-map <leader>tv :tabedit ~/.wt/rvrc.vim<cr>,tm0<cr>
-map <leader>tbv :tabedit $BASE_PATH/vim/rvrc.vim<cr>,tm0<cr>
-map <F11> :source $BASE_PATH/vim/rvrc.vim<cr>
+map <leader>r  :e! $BASE_PATH/rc.vim<cr>
+map <leader>tr :tabedit $BASE_PATH/rc.vim<cr>,tm0<cr>
+map <leader>tv :tabedit $BASE_PATH/vimrc.vim<cr>,tm0<cr>
+map <F11>      :source $BASE_PATH/vimrc.vim<cr>
 "When .vimrc is edited, reload it
 autocmd! bufwritepost vimrc source $BASE_PATH/vim/vimrc
 autocmd! bufwritepost rvrc.vim source $BASE_PATH/vim/rvrc.vim
