@@ -46,7 +46,7 @@ Bundle 'mileszs/ack.vim'
 "Bundle 'mutewinter/swap-parameters'
 "Bundle 'keepcase.vim'
 "Bundle 'scratch.vim'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 "" Automatic Helpers
 Bundle 'IndexedSearch'
 "Bundle 'xolox/vim-session'
