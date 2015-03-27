@@ -337,6 +337,7 @@ map <C-TAB> <C-W>w<C-m>
 map <F2> :!wt -explorer<cr>
 "map <F2> :call Sysexport()<cr>
 map <F4> ,tc
+map X ,tc
 
 map <F5> ,cd:e%<cr>
 map <F6> ,cd:!wt -rmvn <cr>
