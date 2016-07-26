@@ -5,64 +5,65 @@
 set nocompatible
 filetype off     " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " ---------------
 " Plugin Bundles
 " ---------------
 
 "" Navigation
-Bundle 'ZoomWin'
-Bundle 'taglist-plus'
+Plugin 'ZoomWin'
+Plugin 'taglist-plus'
 
 "Bundle 'wincent/Command-T'
 "" This fork is required due to remapping ; to :
-Bundle 'christoomey/vim-space'
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'christoomey/vim-space'
+Plugin 'Lokaltog/vim-easymotion'
 "Bundle 'mutewinter/LustyJuggler'
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 "" UI Additions
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Rykka/colorv.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Rykka/colorv.vim'
 "Bundle 'nanotech/jellybeans.vim'
-Bundle 'tomtom/quickfixsigns_vim'
+Plugin 'tomtom/quickfixsigns_vim'
 "" Commands
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-speeddating'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-speeddating'
 "Bundle 'tpope/vim-fugitive'
-Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'mileszs/ack.vim'
 "Bundle 'gmarik/sudo-gui.vim'
 "Bundle 'milkypostman/vim-togglelist'
 "Bundle 'mutewinter/swap-parameters'
 "Bundle 'keepcase.vim'
 "Bundle 'scratch.vim'
-Bundle 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
 "" Automatic Helpers
-Bundle 'IndexedSearch'
+Plugin 'IndexedSearch'
 "Bundle 'xolox/vim-session'
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
-Bundle 'gregsexton/MatchTag'
-Bundle 'Shougo/neocomplcache'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'gregsexton/MatchTag'
+Plugin 'Shougo/neocomplcache'
 let g:neocomplcache_enable_at_startup = 1
 
 "" Snippets
-Bundle 'garbas/vim-snipmate'
-Bundle 'scrooloose/snipmate-snippets'
-Bundle 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'scrooloose/snipmate-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
 " FuzzyFinder
-Bundle 'FuzzyFinder'
+Plugin 'FuzzyFinder'
 
 "
 "" Language Additions
@@ -89,7 +90,7 @@ Bundle 'FuzzyFinder'
 "Bundle 'timcharper/textile.vim'
 "Bundle 'ChrisYip/Better-CSS-Syntax-for-Vim'
 "Bundle 'acustodioo/vim-tmux'
-Bundle 'hallison/vim-markdown'
+Plugin 'hallison/vim-markdown'
 "Bundle 'xhtml.vim--Grny'
 "Bundle 'groenewege/vim-less'
 "" MatchIt
@@ -98,11 +99,12 @@ Bundle 'hallison/vim-markdown'
 "Bundle 'nelstrom/vim-textobj-rubyblock'
 "
 "" Libraries
-Bundle 'L9'
+Plugin 'L9'
 "Bundle 'tpope/vim-repeat'
-Bundle 'tomtom/tlib_vim'
+Plugin 'tomtom/tlib_vim'
 "Bundle 'mathml.vim'
 
 " Automatically detect file types. (must turn on after Vundle)
+call vundle#end()
 filetype plugin indent on  
 
